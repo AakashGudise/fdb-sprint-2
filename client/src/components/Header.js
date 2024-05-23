@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import Avatar from '@mui/material/Avatar';
+import logo from '../assets/images/logo.png'
+
 import "./header.css"
 import { LoginContext } from './ContextProvider/Context';
 import Menu from '@mui/material/Menu';
@@ -69,7 +71,7 @@ const Header = () => {
             <header>
                 <nav>
 
-                    <NavLink to="/"><h1>Find Dubai</h1></NavLink>
+                    <NavLink to="/dash" style={{textDecoration:"none",color:"pink"}}><h1>Find Dubai</h1></NavLink>
                     <div className="avtar">
                         {
                             logindata.ValidUserOne ? <Avatar style={{ background: "salmon", fontWeight: "bold", textTransform: "capitalize" }} onClick={handleClick}>{logindata.ValidUserOne.fname[0].toUpperCase()}</Avatar> :
